@@ -13,10 +13,10 @@
     <description>An open-source location picker control for Microsoft Bot Framework powered by Bing's Maps REST services. This control makes the process of collecting and validating the user's desired location in a conversation easy and reliable.</description>
     <copyright>Copyright 2018</copyright>
     <dependencies>
-      <dependency id="Autofac" version=">=4.1.1" />
-      <dependency id="Microsoft.Bot.Builder" version=">=3.8.1" />
-      <dependency id="Microsoft.Rest.ClientRuntime" version=">=2.3.3" />
-      <dependency id="Newtonsoft.Json" version=">=9.0.1" />
+      <dependency id="Autofac" version="4.1.1" />
+      <dependency id="Microsoft.Bot.Builder" version="3.8.1" />
+      <dependency id="Microsoft.Rest.ClientRuntime" version="2.3.3" />
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
     </dependencies>
   </metadata>
   <files>
