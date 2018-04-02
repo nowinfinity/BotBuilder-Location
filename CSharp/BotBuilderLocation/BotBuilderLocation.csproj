@@ -98,6 +98,8 @@
     <Compile Include="Dialogs\ILocationDialogFactory.cs" />
     <Compile Include="Dialogs\LocationRetrieverDialogBase.cs" />
     <Compile Include="FavoritesManager.cs" />
+    <Compile Include="Google\GoogleGeocodingService.cs" />
+    <Compile Include="Google\Models\Models.cs" />
     <Compile Include="IFavoritesManager.cs" />
     <Compile Include="ILocationCardBuilder.cs" />
     <Compile Include="LocationCardBuilder.cs" />
