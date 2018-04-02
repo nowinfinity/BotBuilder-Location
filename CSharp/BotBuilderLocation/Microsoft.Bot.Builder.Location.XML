@@ -277,6 +277,11 @@
             neighborhood, admin district, admin district 2, formatted address, postal code and country or region.
             </summary>
         </member>
+        <member name="P:Microsoft.Bot.Builder.Location.Bing.Address.Unit">
+            <summary>
+            Unit Number
+            </summary>
+        </member>
         <member name="P:Microsoft.Bot.Builder.Location.Bing.Address.AddressLine">
             <summary>
             The official street line of an address relative to the area, as specified by the Locality, or PostalCode, properties. 
@@ -977,6 +982,12 @@
             <summary>
             Represents a postal address (https://schema.org/PostalAddress)
             </summary>
+        </member>
+        <member name="P:Microsoft.Bot.Builder.Location.PostalAddress.Unit">
+            <summary>
+            Gets or sets the unit number
+            </summary>
+            <example>123A</example>
         </member>
         <member name="P:Microsoft.Bot.Builder.Location.PostalAddress.FormattedAddress">
             <summary>

@@ -76,6 +76,7 @@ namespace Microsoft.Bot.Builder.Location.Bing
                         Address = new Address
                         {
                             FormattedAddress = location.FormattedAddress,
+                            Unit = getAddressPart(location.AddressComponents, AddressType.subpremise),
                             PostalCode = getAddressPart(location.AddressComponents, AddressType.postal_code),
                             CountryRegion = getAddressPart(location.AddressComponents, AddressType.country),
                             Locality = getAddressPart(location.AddressComponents, AddressType.locality),
