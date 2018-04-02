@@ -15,11 +15,8 @@ namespace Microsoft.Bot.Builder.Location.Bing
         readonly static string GeoCodeApiUri = $"{GoogleMapsBaseUri}/geocode/json";
         private readonly string apiKey;
 
-        //public GoogleMapsService(string apiKey = "AIzaSyAuvm9lQIAFYxysfberpRHgMkFe4OjLfVI")
-        public GoogleGeocodingService(string apiKey = "AIzaSyCkgDAqcMuzroa7UToLqXsXV2v9ppfNl3A")
-        {
-            this.apiKey = apiKey;
-        }
+        public GoogleGeocodingService(string apiKey)
+            => this.apiKey = apiKey;
 
         /// <summary>
         /// https://developers.google.com/maps/documentation/static-maps/intro
@@ -28,9 +25,7 @@ namespace Microsoft.Bot.Builder.Location.Bing
         /// <param name="index"></param>
         /// <returns></returns>
         public string GetLocationMapImageUrl(Location location, int? index = null)
-        {
-            return $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=15&size=500x280&key={apiKey}";
-        }
+            => $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=15&size=500x280&key={apiKey}";
 
         /// <summary>
         /// https://developers.google.com/maps/documentation/geocoding/intro
@@ -39,16 +34,10 @@ namespace Microsoft.Bot.Builder.Location.Bing
         /// <param name="longitude"></param>
         /// <returns></returns>
         public Task<LocationSet> GetLocationsByPointAsync(double latitude, double longitude)
-        {
-            var url = $"{GeoCodeApiUri}?latlng={latitude},{longitude}&key={apiKey}";
-            return GetLocationsAsync(url);
-        }
+            => GetLocationsAsync($"{GeoCodeApiUri}?latlng={latitude},{longitude}&key={apiKey}");
 
         public Task<LocationSet> GetLocationsByQueryAsync(string address)
-        {
-            var url = $"{GeoCodeApiUri}?address={address}&key={apiKey}";
-            return GetLocationsAsync(url);
-        }
+            => GetLocationsAsync($"{GeoCodeApiUri}?address={address}&key={apiKey}");
 
         private async Task<LocationSet> GetLocationsAsync(string url)
         {
