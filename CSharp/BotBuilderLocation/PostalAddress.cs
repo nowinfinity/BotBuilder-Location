@@ -9,6 +9,12 @@
     public class PostalAddress
     {
         /// <summary>
+        /// Gets or sets the unit number
+        /// </summary>
+        /// <example>123A</example>
+        public string Unit { get; set; }
+
+        /// <summary>
         /// Gets or sets the formatted address.
         /// </summary>
         /// <example>One Microsoft Way, Redmond, WA, United States (98052)</example>

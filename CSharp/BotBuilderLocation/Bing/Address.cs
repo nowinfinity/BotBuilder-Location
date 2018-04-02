@@ -11,6 +11,12 @@
     public class Address
     {
         /// <summary>
+        /// Unit Number
+        /// </summary>
+        [JsonIgnore]
+        public string Unit { get; set; }
+
+        /// <summary>
         /// The official street line of an address relative to the area, as specified by the Locality, or PostalCode, properties. 
         /// Typical use of this element would be to provide a street address or any official address.
         /// </summary>
