@@ -29,7 +29,7 @@ namespace Microsoft.Bot.Builder.Location.Bing
         /// <returns></returns>
         public string GetLocationMapImageUrl(Location location, int? index = null)
         {
-            return $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=14&size=500x280&key={apiKey}";
+            return $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=15&size=500x280&key={apiKey}";
         }
 
         /// <summary>
