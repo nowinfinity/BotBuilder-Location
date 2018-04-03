@@ -107,6 +107,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GoogleClientTests.cs" />
     <Compile Include="SpecialCommandsTests.cs" />
     <Compile Include="LocationSelectionDialogTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

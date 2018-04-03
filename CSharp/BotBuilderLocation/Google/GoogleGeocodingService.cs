@@ -66,12 +66,12 @@ namespace Microsoft.Bot.Builder.Location.Bing
                                 location.Geometry.Location.Lng
                             }
                         },
-                        BoundaryBox = new List<double> {
+                        BoundaryBox = location.Geometry.Bounds !=null? new List<double> {
                             location.Geometry.Bounds.Northeast.Lat,
                             location.Geometry.Bounds.Northeast.Lng,
                             location.Geometry.Bounds.Southwest.Lat,
                             location.Geometry.Bounds.Southwest.Lng
-                        },
+                        } : null,
                         MatchCodes = location.Types.ToList(),
                         Address = new Address
                         {
