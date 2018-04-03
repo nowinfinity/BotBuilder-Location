@@ -25,7 +25,7 @@ namespace Microsoft.Bot.Builder.Location.Bing
         /// <param name="index"></param>
         /// <returns></returns>
         public string GetLocationMapImageUrl(Location location, int? index = null)
-            => $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=15&size=500x280&key={apiKey}";
+            => $"{GoogleMapsBaseUri}/staticmap?maptype=roadmap&markers={location.Point.Coordinates[0]},{location.Point.Coordinates[1]}&zoom=16&size=500x280&key={apiKey}";
 
         /// <summary>
         /// https://developers.google.com/maps/documentation/geocoding/intro
